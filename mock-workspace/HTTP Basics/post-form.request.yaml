@@ -1,0 +1,9 @@
+id: 00468f3f-236c-4d9b-912e-ac1eac83c7ec
+name: POST form
+method: POST
+url: "{{baseUrl}}/post"
+body:
+  kind: formUrlencoded
+  fields:
+    - { key: name, value: impostor, enabled: true }
+    - { key: kind, value: form,     enabled: true }

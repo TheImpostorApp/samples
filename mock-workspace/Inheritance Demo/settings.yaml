@@ -1,0 +1,3 @@
+auth: { type: bearer, token: folder-level-token }
+headers:
+  - { key: X-From-Folder, value: "yes", enabled: true }

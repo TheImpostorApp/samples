@@ -1,0 +1,5 @@
+id: 907ff0b9-7930-4632-9f55-de403846d4d5
+name: API key (header)
+method: GET
+url: "{{baseUrl}}/anything"
+auth: { type: apiKey, key: X-Api-Key, value: secret123, location: header }

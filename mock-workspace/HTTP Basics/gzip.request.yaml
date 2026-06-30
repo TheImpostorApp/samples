@@ -1,0 +1,4 @@
+id: 96d15eb0-c270-46dd-8dbc-e38ac2159090
+name: GZip
+method: GET
+url: "{{baseUrl}}/gzip"

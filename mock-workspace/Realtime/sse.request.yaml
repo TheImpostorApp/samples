@@ -1,0 +1,7 @@
+id: ad75e896-3264-4978-a290-0a0139f3b100
+name: Server-Sent Events
+protocol: sse
+method: GET
+# go-httpbin streams `event: ping` messages on /sse. Hit Connect to watch them
+# arrive live; Disconnect to stop the stream.
+url: "{{baseUrl}}/sse"

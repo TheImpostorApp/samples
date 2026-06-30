@@ -1,0 +1,5 @@
+id: d556ed54-ea23-4476-87a9-4ed4c445ed54
+name: Digest auth
+method: GET
+url: "{{baseUrl}}/digest-auth/auth/impostor/secret"
+auth: { type: digest, username: impostor, password: secret }

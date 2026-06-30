@@ -1,0 +1,5 @@
+id: c4db5dd6-c654-4c4d-ad35-d158592aa7d9
+name: Inherits folder header
+method: GET
+url: "{{baseUrl}}/headers"
+auth: { type: inherit }

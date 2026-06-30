@@ -1,0 +1,2 @@
+headers:
+  - { key: X-Client, value: impostor-demo, enabled: true }

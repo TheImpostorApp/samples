@@ -1,0 +1,9 @@
+id: 8b005560-8add-4a9b-a068-5611d492847c
+name: Headers & query
+method: GET
+url: "{{baseUrl}}/anything"
+query:
+  - { key: foo, value: bar, enabled: true }
+  - { key: baz, value: qux, enabled: true }
+headers:
+  - { key: X-Demo, value: hello, enabled: true }

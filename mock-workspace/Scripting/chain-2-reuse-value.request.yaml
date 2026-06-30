@@ -1,0 +1,20 @@
+id: d08b75d6-fbfd-46e8-b195-0efcd6636491
+name: Chain 2 — reuse the captured value
+method: GET
+url: "{{baseUrl}}/anything"
+query:
+  - { key: id, value: "{{requestId}}", enabled: true }
+preScript: |-
+  // Guard: this request depends on {{requestId}}, which "Chain 1" sets. If you run
+  // it on its own first, the variable is empty — fail fast with a clear message.
+  if (!im.variables.get("requestId")) {
+    throw new Error("requestId is not set — run 'Chain 1 — capture a value' first");
+  }
+postScript: |-
+  // The captured id should round-trip back from the echo server.
+  im.test("status is 200", function () {
+    im.expect(im.response.code).to.equal(200);
+  });
+  im.test("server received the captured requestId", function () {
+    im.expect(im.response.text()).to.include(im.variables.get("requestId"));
+  });

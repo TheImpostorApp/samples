@@ -1,0 +1,27 @@
+id: 9794ff80-2bec-4a88-89a2-4cc96218fa40
+name: Pre-request — set variables
+method: GET
+url: "{{baseUrl}}/anything"
+query:
+  - { key: ts, value: "{{ts}}", enabled: true }
+  - { key: nonce, value: "{{nonce}}", enabled: true }
+preScript: |-
+  // A pre-request script runs BEFORE the request is sent and can set variables
+  // that the request then templates in via {{ts}} / {{nonce}}. Here we stamp the
+  // request with a fresh timestamp and a one-time nonce.
+  const ts = Math.floor(Date.now() / 1000);
+  const nonce = Math.random().toString(36).slice(2);
+
+  im.variables.set("ts", ts);
+  im.variables.set("nonce", nonce);
+
+  console.log("prepared request: ts=" + ts + " nonce=" + nonce);
+postScript: |-
+  // Confirm the values we set in the pre-request script actually reached the
+  // server (go-httpbin echoes the query string back under "args").
+  im.test("status is 200", function () {
+    im.expect(im.response.code).to.equal(200);
+  });
+  im.test("nonce was sent to the server", function () {
+    im.expect(im.response.text()).to.include(im.variables.get("nonce"));
+  });

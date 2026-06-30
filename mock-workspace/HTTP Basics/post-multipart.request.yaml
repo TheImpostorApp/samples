@@ -1,0 +1,10 @@
+id: a95d2089-b3b3-4ed5-948f-76052a6fb6e7
+name: POST multipart
+method: POST
+url: "{{baseUrl}}/post"
+body:
+  kind: multipart
+  fields:
+    - { kind: text, key: name, value: impostor }
+    - { kind: text, key: kind, value: multipart }
+    - { kind: file, key: file, path: "{{workspaceDir}}/.assets/sample.txt", contentType: text/plain }

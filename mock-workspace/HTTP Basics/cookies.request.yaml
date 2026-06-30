@@ -1,0 +1,7 @@
+id: dcf94547-b759-4bbe-a6c7-9397bc722f35
+name: Cookies
+method: GET
+# /cookies/set issues a Set-Cookie then 302-redirects to /cookies, which echoes the
+# cookies it received — so the response shows the jar stored AND resent the cookie.
+# Open the command palette → "Manage cookies" to see/edit it.
+url: "{{baseUrl}}/cookies/set?demo=impostor"

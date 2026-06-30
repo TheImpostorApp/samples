@@ -1,0 +1,8 @@
+name: Mock API Samples
+globals:
+- key: gogo
+  value: power rangers! is a licenced productin of japanese series
+  enabled: true
+  secret: false
+  script: false
+  reference: ''

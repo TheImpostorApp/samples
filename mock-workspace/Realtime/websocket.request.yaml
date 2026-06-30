@@ -1,0 +1,22 @@
+id: 1e65f451-4172-4628-8b68-fea22d53418b
+name: WebSocket
+protocol: ws
+method: GET
+url: '{{wsBaseUrl}}/websocket/echo'
+headers: []
+query: []
+body:
+  kind: none
+variables: []
+followRedirects: true
+timeoutMs: 0
+auth:
+  type: none
+tls:
+  caCertPath: ''
+  clientCertPath: ''
+  clientKeyPath: ''
+  clientCertPassword: ''
+  insecureSkipVerify: false
+preScript: ''
+postScript: ''

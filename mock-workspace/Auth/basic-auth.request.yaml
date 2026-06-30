@@ -1,0 +1,5 @@
+id: accd6679-f3fc-4a03-8cde-8e3728eabcfd
+name: Basic auth
+method: GET
+url: "{{baseUrl}}/basic-auth/user/passwd"
+auth: { type: basic, username: user, password: passwd }

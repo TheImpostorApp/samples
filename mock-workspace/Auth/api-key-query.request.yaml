@@ -1,0 +1,29 @@
+id: a6198007-6b08-40aa-8f2d-9710f414f79b
+name: API key (query)
+protocol: http
+method: GET
+url: '{{baseUrl}}/anything'
+headers: []
+query:
+- key: test
+  value: asd
+  enabled: true
+body:
+  kind: none
+variables: []
+followRedirects: true
+timeoutMs: 0
+auth:
+  type: apiKey
+  key: api_key
+  value: ''
+  value_ref: b4d331ec-48df-4d04-8ea5-1c85550d6c71
+  location: query
+tls:
+  caCertPath: ''
+  clientCertPath: ''
+  clientKeyPath: ''
+  clientCertPassword: ''
+  insecureSkipVerify: false
+preScript: ''
+postScript: ''

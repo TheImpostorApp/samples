@@ -1,0 +1,14 @@
+id: 5bf19040-0bbf-42c5-93e8-33f3e8c2f8ad
+name: AWS SigV4 (echo)
+method: GET
+# The mock doesn't validate AWS signatures; httpbin's /anything echoes the request,
+# so the response shows the generated `Authorization: AWS4-HMAC-SHA256 …` and
+# `x-amz-date` headers. (Dummy AWS example credentials.)
+url: "{{baseUrl}}/anything?b=2&a=1"
+auth:
+  type: sigv4
+  accessKey: AKIDEXAMPLE
+  secretKey: "wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY"
+  sessionToken: ""
+  region: us-east-1
+  service: execute-api

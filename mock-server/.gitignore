@@ -1,0 +1,12 @@
+# Throwaway demo certs. The canonical *server* set (ca.pem, server.pem, server.key)
+# is committed so the mock stack and the example bundle share one stable CA — see
+# gen-certs.sh. Everything else generated (the CA key, client identity, CSRs,
+# serials) stays out of git; the bundle ships its own copy of ca.pem + client.p12.
+certs/*.pem
+certs/*.key
+certs/*.p12
+certs/*.srl
+certs/*.csr
+!certs/ca.pem
+!certs/server.pem
+!certs/server.key
