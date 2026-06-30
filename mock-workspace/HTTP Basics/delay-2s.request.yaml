@@ -1,0 +1,5 @@
+id: 7e9a4f17-052d-43db-9549-c4298fd46311
+name: Delay 2s
+method: GET
+url: "{{baseUrl}}/delay/2"
+timeoutMs: 30000

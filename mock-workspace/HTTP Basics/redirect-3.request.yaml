@@ -1,0 +1,4 @@
+id: 2b1711af-e97e-43ac-9bb7-e53bb52bf76b
+name: Redirect x3
+method: GET
+url: "{{baseUrl}}/redirect/3"

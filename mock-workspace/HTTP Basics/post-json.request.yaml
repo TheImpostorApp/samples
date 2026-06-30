@@ -1,0 +1,12 @@
+id: 79cddf06-c11d-4ffb-88a3-6825f8a615eb
+name: POST JSON
+method: POST
+url: "{{baseUrl}}/post"
+body:
+  kind: raw
+  contentType: application/json
+  content: |-
+    {
+      "hello": "world",
+      "n": 42
+    }

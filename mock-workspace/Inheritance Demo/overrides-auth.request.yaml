@@ -1,0 +1,5 @@
+id: e8ffddf0-af30-43e4-82a8-97fe5f072873
+name: Overrides folder auth
+method: GET
+url: "{{baseUrl}}/bearer"
+auth: { type: bearer, token: own-request-token }

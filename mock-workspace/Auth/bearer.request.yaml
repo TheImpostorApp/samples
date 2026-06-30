@@ -1,0 +1,5 @@
+id: 52bd44df-d959-4ddb-b047-3e8eff4751ce
+name: Bearer
+method: GET
+url: "{{baseUrl}}/bearer"
+auth: { type: bearer, token: demo-token }

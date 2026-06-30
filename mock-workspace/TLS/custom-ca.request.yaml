@@ -1,0 +1,6 @@
+id: c5cc15ab-70c1-4d66-a728-48bcdac31d48
+name: Custom CA (TLS only)
+method: GET
+url: "https://localhost:8444/anything"
+tls:
+  caCertPath: "{{workspaceDir}}/.assets/certs/ca.pem"

@@ -1,0 +1,24 @@
+id: b5ca971c-0943-423b-b6e0-3c7b27aa898a
+name: Post-request — tests
+method: GET
+url: "{{baseUrl}}/get"
+postScript: |-
+  // A post-request script runs AFTER the response arrives. Use im.test(...) with
+  // im.expect(...) to assert on the response; results show in the Tests tab.
+  im.test("status is 200", function () {
+    im.expect(im.response.code).to.equal(200);
+  });
+
+  im.test("responds in under 2s", function () {
+    im.expect(im.response.responseTime).to.be.below(2000);
+  });
+
+  im.test("body is JSON echoing the request url", function () {
+    const body = im.response.json();
+    im.expect(body).to.have.property("url");
+    im.expect(body.url).to.include("/get");
+  });
+
+  im.test("Content-Type is JSON", function () {
+    im.expect(im.response.headers.get("Content-Type")).to.include("application/json");
+  });

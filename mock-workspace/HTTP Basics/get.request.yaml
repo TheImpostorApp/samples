@@ -1,0 +1,4 @@
+id: e7ca09db-32b3-44f7-ac84-1ee7a0f2d19a
+name: GET / echo
+method: GET
+url: "{{baseUrl}}/get"

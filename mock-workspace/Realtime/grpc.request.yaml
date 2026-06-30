@@ -1,0 +1,39 @@
+id: d4149754-27d7-41c1-b57b-470127cebbe6
+name: gRPC
+protocol: grpc
+method: GET
+url: ''
+headers: []
+query: []
+body:
+  kind: none
+variables: []
+followRedirects: true
+timeoutMs: 0
+auth:
+  type: none
+tls:
+  caCertPath: ''
+  clientCertPath: ''
+  clientKeyPath: ''
+  clientCertPassword: ''
+  insecureSkipVerify: false
+preScript: ''
+postScript: ''
+grpc:
+  target: '{{grpcTarget}}'
+  source: reflection
+  protoFiles: []
+  service: grpcbin.GRPCBin
+  method: NoResponseUnary
+  message: '{}'
+  metadata:
+  - key: ''
+    value: ''
+    enabled: true
+  tls:
+    caCertPath: ''
+    clientCertPath: ''
+    clientKeyPath: ''
+    clientCertPassword: ''
+    insecureSkipVerify: false

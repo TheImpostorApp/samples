@@ -1,0 +1,5 @@
+id: f0fd9078-a7c2-47e5-9da3-f8008a18f18c
+name: Inherits folder auth
+method: GET
+url: "{{baseUrl}}/bearer"
+auth: { type: inherit }

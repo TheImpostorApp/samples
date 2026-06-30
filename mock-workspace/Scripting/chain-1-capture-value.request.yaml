@@ -1,0 +1,15 @@
+id: 61dcba9c-345e-4a0f-bd21-bea027102926
+name: Chain 1 — capture a value
+method: GET
+url: "{{baseUrl}}/uuid"
+postScript: |-
+  // Extract a value from one response and save it for a later request. Here we
+  // pull the server-generated uuid and store it in the environment so the next
+  // request ("Chain 2") can reuse it via {{requestId}}.
+  im.test("status is 200", function () {
+    im.expect(im.response.code).to.equal(200);
+  });
+
+  const id = im.response.json().uuid;
+  im.environment.set("requestId", id);
+  console.log("captured requestId=" + id);

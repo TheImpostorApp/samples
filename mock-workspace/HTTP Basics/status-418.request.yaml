@@ -1,0 +1,4 @@
+id: 8a8293be-cc89-45d6-b782-6ffc1bed1bc8
+name: Status 418
+method: GET
+url: "{{baseUrl}}/status/418"

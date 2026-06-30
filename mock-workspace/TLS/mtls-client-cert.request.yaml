@@ -1,0 +1,8 @@
+id: cbf0e5cc-b2ec-4eaf-a02a-346317eb904d
+name: mTLS (client cert)
+method: GET
+url: "https://localhost:8443/anything"
+tls:
+  caCertPath: "{{workspaceDir}}/.assets/certs/ca.pem"
+  clientCertPath: "{{workspaceDir}}/.assets/certs/client.p12"
+  clientCertPassword: impostor
