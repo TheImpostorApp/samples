@@ -1,6 +1,6 @@
 # Impostor — Sample Workspaces
 
-Ready-to-open example workspaces for [**Impostor**](https://github.com/), a fast,
+Ready-to-open example workspaces for [**Impostor**](https://impostor.uk/), a fast,
 local, cross-platform API client (a lightweight, native alternative to Postman built on
 Tauri v2 + SvelteKit, not Electron).
 
